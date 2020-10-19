@@ -2,9 +2,13 @@
 AWSTemplateFormatVersion: 2010-09-09
 Description: >-
    Just for debugging
-
+Parameters:
+  TemplateDebugURL:
+    Default: 'us-east-1'
+    Description: 'The AWS Region where the Quick Start S3 bucket (QSS3BucketName) is hosted. When using your own bucket, you must specify this value.'
+    Type: String
 Resources:
   NullResource:
     Type: AWS::CloudFormation::WaitConditionHandle
     Properties:
-      Timeout: 10
+      Timeout: 600
