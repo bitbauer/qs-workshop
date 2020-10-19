@@ -176,10 +176,10 @@ Resources:
             - https://${S3Bucket}.s3.${S3Region}.${AWS::URLSuffix}/${QSS3KeyPrefix}submodules/quickstart-aws-vpc/templates/aws-vpc.template
             - S3Region: !If [UsingDefaultBucket, !Ref 'AWS::Region', !Ref QSS3BucketRegion]
               S3Bucket: !If [UsingDefaultBucket, !Sub '${QSS3BucketName}-${AWS::Region}', !Ref QSS3BucketName]
-Outputs:
-  WebURL:
-    Description: "The web server URL"
-    Value:
-      Fn::GetAtt:
-      - WorkloadStack
-      - Outputs.URL
+# Outputs:
+#   WebURL:
+#     Description: "The web server URL"
+#     Value:
+#       Fn::GetAtt:
+#       - WorkloadStack
+#       - Outputs.URL
