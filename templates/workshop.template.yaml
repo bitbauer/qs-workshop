@@ -1,1 +1,10 @@
 # See lab instructions
+AWSTemplateFormatVersion: 2010-09-09
+Description: >-
+   Just for debugging
+
+Resources:
+  NullResource:
+    Type: AWS::CloudFormation::WaitConditionHandle
+    Properties:
+      Timeout: 10
