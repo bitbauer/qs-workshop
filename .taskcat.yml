@@ -1,0 +1,19 @@
+project:
+  name: qs-workshop
+  regions:
+  - us-east-1
+tests:
+  default:
+    template: ./templates/master.template.yaml
+    regions:
+    - us-east-1
+    parameters:
+      EmailAddress: "4582513+bitbauer@users.noreply.github.com"
+      AvailabilityZones: us-east-1a, us-east-1b
+      InstanceType: t2.micro
+      KeyPairName: ccwi
+      WebserverCIDR: "0.0.0.0/0"
+      QSS3KeyPrefix: "qs-workshop/"
+      QSS3BucketName: "$[taskcat_autobucket]"
+      QSS3BucketRegion: us-east-1
+      # QSS3BucketRegion: "$[taskcat_current_region]"
